@@ -291,3 +291,105 @@ JavaScript最佳实践：
   - 使用`[]`来代替`new Array()`
   - 使用`/()/`来代替`new RegExp()`
   - 使用`function(){}`来代替`new Function()`
+
+JavaScript表单：
+
+约束HTML输入属性：
+
+|    属性    |          描述           |
+| :--------: | :---------------------: |
+| `disabled` |  规定`input`元素被禁用  |
+|   `max`    | 规定`input`元素的最大值 |
+|   `min`    | 规定`input`元素的最小值 |
+| `pattern`  | 规定`input`元素的值模式 |
+| `required` |    规定输入字段必填     |
+|   `type`   |  规定`input`元素的类型  |
+
+通过约束进行CSS选择：
+
+|   选择器    |                 描述                  |
+| :---------: | :-----------------------------------: |
+| `:disabled` | 选择设置了`disabled`属性的`input`元素 |
+| `:invalid`  |      选择带有无效值的`input`元素      |
+| `:optional` | 选择未设置`required`属性的`input`元素 |
+| `:required` | 选择设置了`required`属性的`input`元素 |
+|  `:valid`   |      选择带有有效值的`input`元素      |
+
+HTML DOM对象：
+
+查找HTML元素：
+
+|                  方法                  |         描述         |
+| :------------------------------------: | :------------------: |
+|     `document.getElementById(id)`      | 通过元素`id`查找元素 |
+|  `document.getElementByTagName(name)`  |  通过标签名查找元素  |
+| `document.getElementByClassName(name)` |   通过类名查找元素   |
+
+改变HTML元素：
+
+|                   方法                   |          描述          |
+| :--------------------------------------: | :--------------------: |
+|  `element.innerHTML = new html content`  | 改变元素的`inner HTML` |
+|     `element.attribute = new value`      | 改变`HTML`元素的属性值 |
+| `element.setAttribute(attribute, value)` | 改变`HTML`元素的属性值 |
+|   `element.style.property = new style`   |  改变`HTML`元素的样式  |
+
+添加和删除元素：
+
+|               方法               |       描述       |
+| :------------------------------: | :--------------: |
+| `document.creatElement(element)` |  创建`HTML`元素  |
+| `document.removeChild(element)`  |  删除`HTML`元素  |
+| `document.appendChild(element)`  |  添加`HTML`元素  |
+| `document.replaceChild(element)` |  替换`HTML`元素  |
+|      `document.write(text)`      | 写入`HTML`输出流 |
+
+添加事件处理程序：
+
+向`onclick`事件添加事件处理程序：`document.getElementById(id).onclick = function () { code }`
+
+查找HTML对象：
+
+|            属性            |                    描述                     |
+| :------------------------: | :-----------------------------------------: |
+|     `document.anchors`     |      返回用有`name`属性的所有`<a>`元素      |
+|      `document.body`       |              返回`<body>`元素               |
+|     `document.cookie`      |             返回文档的`cookie`              |
+| `document.documentElement` |              返回`<html>`元素               |
+|  `document.documentMode`   |            返回浏览器使用的模式             |
+|     `document.domain`      |            返回文档服务器的域名             |
+|      `document.forms`      |           返回所有的`<form>`元素            |
+|      `document.head`       |              返回`<head>`元素               |
+|     `document.images`      |             返回所有`<img>`元素             |
+|      `document.links`      | 返回拥有`href`属性的所有`<area>`和`<a>`元素 |
+|    `document.referrer`     |               返回引用的`URI`               |
+|      `document.title`      |              返回`<title>`元素              |
+|       `document.URL`       |             返回文档的完整`URL`             |
+
+Window Screen:
+
+- `screen.width`
+- `screen.height`
+- `screen.availWidth`
+- `screen.availHeight`
+- `screen.colorDepth`
+- `screen.pixelDepth`
+
+Window Location:
+
+- `location.href`: 返回当前页面的`href(URL)`
+- `location.hostname`: 返回web主机域名
+- `lacation.pathname`: 返回当前页面的路径或文件名
+- `location.protocol`: 返回使用的web协议(`http:`或`https:`)
+- `location.assign`: 加载新文档
+
+Window Navigator:
+
+- `navigator.appName`: 返回浏览器应用程序名称
+- `navigator.appCodeName`: 返回浏览器的应用程序代码名称
+- `navigator.platform`: 返回浏览器平台（操作系统）
+- `navigator.cookieEnabled`: 判断`cookie`是否已启用
+- `navigator.appVersion`: 返回有关浏览器的版本信息
+- `navigator.userAgent`: 返回浏览器发送到服务器的用户代理报头
+- `navigator.language`: 返回浏览器语言
+- `navigator.onLine`: 返回浏览器是否在线
