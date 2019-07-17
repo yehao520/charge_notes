@@ -393,3 +393,9 @@ Window Navigator:
 - `navigator.userAgent`: 返回浏览器发送到服务器的用户代理报头
 - `navigator.language`: 返回浏览器语言
 - `navigator.onLine`: 返回浏览器是否在线
+
+Timing 事件：
+
+- `setTimeout(function, millisecinds)`: 在等待指定时间后执行函数
+- `setInterval(function, milliseconds)`: 等同`setTimeout`但重复执行该函数
+
